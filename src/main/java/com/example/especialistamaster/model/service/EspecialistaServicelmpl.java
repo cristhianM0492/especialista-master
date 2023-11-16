@@ -42,7 +42,7 @@ public class EspecialistaServicelmpl implements IEspecialistaService{
     @Transactional(readOnly = true)  // Para ejecutar en modo de solo lectura
     @Override
     public Especialista findById(Long id) {
-        return especialistaDao.findById(id).isPresent() ? especialistaDao.findById(id).get() : null;
+        return especialistaDao.findById(id).get();
     }
 
 
